@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米官网复刻</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 加载动画 -->
+<div class="loading-wrap" id="loading">
+    <div class="loading-box"></div>
+</div>
+
+<!-- 顶部公告条 -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div class="top-bar-left">
+            <a href="javascript:goPage('home')">小米官网</a>
+            <span class="sep">|</span>
+            <a href="javascript:goPage('shop')">小米商城</a>
+            <span class="sep">|</span>
+            <a href="javascript:goPage('hyperos')">澎湃OS</a>
+            <span class="sep">|</span>
+            <a href="javascript:goPage('slide2')">小米汽车</a>
+            <span class="sep">|</span>
+            <a href="javascript:goPage('youpin')">小米有品</a>
+        </div>
+        <div class="top-bar-right">
+            <span class="top-notice">小米15系列新品热卖中，购机至高享24期免息</span>
+            <a href="javascript:openLoginModal()">登录</a>
+            <span class="sep">|</span>
+            <a href="javascript:openCart()">购物车</a>
+            <span class="sep">|</span>
+            <a href="javascript:showHelp()">帮助中心</a>
+        </div>
+    </div>
+</div>
+
+<!-- 头部导航 -->
+<header>
+    <div class="nav-bar">
+        <div class="logo">MI</div>
+        <ul class="nav-menu">
+            <li><a href="javascript:goPage('home')" class="active">首页</a></li>
+            <li>
+                <a href="javascript:goPage('shop')">小米商城</a>
+                <!-- 悬停下拉产品面板 -->
+                <div class="mega-menu">
+                    <div class="mega-inner">
+                        <a class="mega-item" href="javascript:goPage('shop')">
+                            <img src="https://p0.ssl.qhimgs1.com/t043de738a8deb3195e.jpg" alt="小米15">
+                            <div class="mega-name">小米15</div>
+                            <div class="mega-price">4299元起</div>
+                        </a>
+                        <a class="mega-item" href="javascript:goPage('shop')">
+                            <img src="https://p1.ssl.qhimgs1.com/t04579c1c3408242217.jpg" alt="小米14 Ultra">
+                            <div class="mega-name">小米14 Ultra</div>
+                            <div class="mega-price">5999元起</div>
+                        </a>
+                        <a class="mega-item" href="javascript:goPage('shop')">
+                            <img src="https://p1.ssl.qhimgs1.com/t04a673bda544affad7.jpg" alt="Redmi K70">
+                            <div class="mega-name">Redmi K70</div>
+                            <div class="mega-price">2499元起</div>
+                        </a>
+                        <a class="mega-item" href="javascript:goPage('shop')">
+                            <img src="https://p1.ssl.qhimgs1.com/t04e104826928752ec7.jpg" alt="小米平板7 Pro">
+                            <div class="mega-name">小米平板7 Pro</div>
+                            <div class="mega-price">2999元起</div>
+                        </a>
+                        <a class="mega-item" href="javascript:goPage('shop')">
+                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/product-images/xiaomi-smart-band-10_505982/images/719.png" alt="小米手环10">
+                            <div class="mega-name">小米手环10</div>
+                            <div class="mega-price">249元起</div>
+                        </a>
+                        <a class="mega-item" href="javascript:goPage('shop')">
+                            <img src="https://p2.ssl.qhimgs1.com/t04fb448227332e8bd2.png" alt="小米电视85寸">
+                            <div class="mega-name">小米电视85寸</div>
+                            <div class="mega-price">4999元起</div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="javascript:goPage('hyperos')">澎湃OS</a></li>
+            <li>
+                <a href="javascript:goPage('slide2')">小米汽车</a>
+                <!-- 悬停下拉产品面板 -->
+                <div class="mega-menu">
+                    <div class="mega-inner">
+                        <a class="mega-item" href="javascript:goPage('slide2')">
+                            <img src="https://p0.ssl.qhimgs1.com/t049ef07dc06d462e80.jpg" alt="小米SU7 标准版">
+                            <div class="mega-name">小米SU7 标准版</div>
+                            <div class="mega-price">215900元起</div>
+                        </a>
+                        <a class="mega-item" href="javascript:goPage('slide2')">
+                            <img src="https://p1.ssl.qhimgs1.com/t04da2e21814871b531.jpg" alt="小米SU7 Pro">
+                            <div class="mega-name">小米SU7 Pro</div>
+                            <div class="mega-price">245900元起</div>
+                        </a>
+                        <a class="mega-item" href="javascript:goPage('slide2')">
+                            <img src="https://p0.ssl.qhimgs1.com/t0468a5b7fa56dea0d4.png" alt="小米SU7 Max">
+                            <div class="mega-name">小米SU7 Max</div>
+                            <div class="mega-price">299900元起</div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="javascript:goPage('image')">小米影像</a></li>
+            <li><a href="javascript:goPage('cloud')">云服务</a></li>
+            <li><a href="javascript:goPage('iot')">IoT平台</a></li>
+            <li><a href="javascript:goPage('youpin')">小米有品</a></li>
+        </ul>
+        <div class="user-links">
+            <a href="javascript:openLoginModal()" id="loginText">登录/注册</a>
+            <a href="javascript:openCart()">购物车</a>
+        </div>
+    </div>
+</header>
+
+<!-- 首页 -->
+<div id="home" class="page active">
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide">
+                <img src="https://bjnewsrec-cv.ws.126.net/little767269290cbj00tc02uc0014d000hs00nqg.jpg" alt="小米SU7">
+                <div class="slide-text">
+                    <div class="big-num">SU7</div>
+                    <div class="title">小米汽车</div>
+                    <div class="desc">全速进化</div>
+                    <div class="slide-btn" onclick="goPage('slide2')">了解更多</div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://p0.ssl.qhimgs1.com/t04cf26dcba6c39fd5e.jpg" alt="澎湃OS">
+                <div class="slide-text">
+                    <div class="big-num">OS</div>
+                    <div class="title">澎湃OS</div>
+                    <div class="desc">人车家全生态</div>
+                    <div class="slide-btn" onclick="goPage('hyperos')">了解更多</div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://p0.ssl.qhimgs1.com/t04a5113b3ee1f35e3e.jpg" alt="徕卡影像">
+                <div class="slide-text">
+                    <div class="big-num">CAM</div>
+                    <div class="title">徕卡影像</div>
+                    <div class="desc">大师画质</div>
+                    <div class="slide-btn" onclick="goPage('image')">了解更多</div>
+                </div>
+            </div>
+        </div>
+        <!-- 左右切换箭头 -->
+        <div class="slider-arrow prev" onclick="prevSlide()">‹</div>
+        <div class="slider-arrow next" onclick="nextSlide()">›</div>
+        <div class="slider-dots">
+            <div class="dot active" onclick="goSlide(0)"></div>
+            <div class="dot" onclick="goSlide(1)"></div>
+            <div class="dot" onclick="goSlide(2)"></div>
+        </div>
+    </div>
+
+    <!-- 快捷入口 -->
+    <div class="quick-entry">
+        <a class="quick-item" href="javascript:goPage('shop')">
+            <span class="quick-icon">秒</span>
+            <span>小米秒杀</span>
+        </a>
+        <a class="quick-item" href="javascript:goPage('youpin')">
+            <span class="quick-icon">品</span>
+            <span>小米有品</span>
+        </a>
+        <a class="quick-item" href="javascript:goPage('slide2')">
+            <span class="quick-icon">车</span>
+            <span>小米汽车</span>
+        </a>
+        <a class="quick-item" href="javascript:goPage('hyperos')">
+            <span class="quick-icon">OS</span>
+            <span>澎湃OS</span>
+        </a>
+        <a class="quick-item" href="javascript:goPage('iot')">
+            <span class="quick-icon">联</span>
+            <span>智能互联</span>
+        </a>
+        <a class="quick-item" href="javascript:openCart()">
+            <span class="quick-icon">购</span>
+            <span>购物车</span>
+        </a>
+    </div>
+
+    <!-- 倒计时 -->
+    <div class="count-down-wrap">
+        限时活动倒计时：
+        <span id="h">00</span> :
+        <span id="m">00</span> :
+        <span id="s">00</span>
+    </div>
+
+    <!-- 明星单品横幅 -->
+    <div class="star-banner">
+        <div class="star-text">
+            <div class="star-tag">明星单品</div>
+            <div class="star-title">小米15 系列</div>
+            <div class="star-desc">徕卡光学 Summilux 高速镜头 ｜ 骁龙8 至尊版移动平台</div>
+            <div class="star-price">¥4299 起</div>
+            <button onclick="addToCart('小米手机15',4299)">立即购买</button>
+        </div>
+        <div class="star-img">
+            <img src="https://p0.ssl.qhimgs1.com/t04eb9c331d4fd34f7e.jpg" alt="小米15">
+        </div>
+    </div>
+
+    <!-- 精选产品 带按钮 新增多款不同产品 -->
+<div class="product-section">
+    <div class="section-title">精选产品<span class="section-sub">明星单品 · 诚意推荐</span></div>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-img"><img src="https://p0.ssl.qhimgs1.com/t04eb9c331d4fd34f7e.jpg" alt=""></div>
+            <div class="product-name">小米手机15</div>
+            <div class="product-desc">徕卡影像 | 旗舰性能</div>
+            <div class="product-price">¥4299</div>
+            <div class="product-btns">
+                <button onclick="showDetail('小米手机15','骁龙8旗舰 专业徕卡拍照')">了解详情</button>
+                <button onclick="addToCart('小米手机15',4299)">加入购物车</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img"><img src="https://p1.ssl.qhimgs1.com/t04e104826928752ec7.jpg" alt=""></div>
+            <div class="product-name">小米平板7 Pro</div>
+            <div class="product-desc">2.8K高刷屏</div>
+            <div class="product-price">¥2999</div>
+            <div class="product-btns">
+                <button onclick="showDetail('小米平板7 Pro','办公学习 高清大屏')">了解详情</button>
+                <button onclick="addToCart('小米平板7 Pro',2999)">加入购物车</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img"><img src="https://cdn.cnbj1.fds.api.mi-img.com/product-images/xiaomi-smart-band-10_505982/images/719.png" alt=""></div>
+            <div class="product-name">小米手环10</div>
+            <div class="product-desc">健康监测</div>
+            <div class="product-price">¥249</div>
+            <div class="product-btns">
+                <button onclick="showDetail('小米手环10','心率睡眠监测 长续航')">了解详情</button>
+                <button onclick="addToCart('小米手环10',249)">加入购物车</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img"><img src="https://img1.mydrivers.com/img/20240719/Sd81d07e5-afff-4bc9-ae68-e29c8cd65e6c.jpg" alt=""></div>
+            <div class="product-name">小米Buds 5</div>
+            <div class="product-desc">主动降噪</div>
+            <div class="product-price">¥899</div>
+            <div class="product-btns">
+                <button onclick="showDetail('小米Buds 5','深度降噪 无线耳机')">了解详情</button>
+                <button onclick="addToCart('小米Buds 5',899)">加入购物车</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img"><img src="https://img.alicdn.com/imgextra/i1/O1CN01TVPFXx1hAb7eF9Hsy_!!0-rate.jpg" alt=""></div>
+            <div class="product-name">小米手表S4</div>
+            <div class="product-desc">独立通话 | 运动健康</div>
+            <div class="product-price">¥1599</div>
+            <div class="product-btns">
+                <button onclick="showDetail('小米手表S4','高清大屏 独立通话 全天候健康监测')">了解详情</button>
+                <button onclick="addToCart('小米手表S4',1599)">加入购物车</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img"><img src="https://p0.ssl.qhimgs1.com/t018cf81dfcfb6169b4.jpg" alt=""></div>
+            <div class="product-name">小米充电宝</div>
+            <div class="product-desc">20000mAh 双向快充</div>
+            <div class="product-price">¥199</div>
+            <div class="product-btns">
+                <button onclick="showDetail('小米充电宝','大容量便携 多设备兼容快充')">了解详情</button>
+                <button onclick="addToCart('小米充电宝',199)">加入购物车</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img"><img src="https://p2.ssl.qhimgs1.com/t018c94e0e272c47f02.jpg" alt=""></div>
+            <div class="product-name">小米空气净化器</div>
+            <div class="product-desc">除甲醛 | 静音智能</div>
+            <div class="product-price">¥899</div>
+            <div class="product-btns">
+                <button onclick="showDetail('小米空气净化器','高效除醛 智能联动 静音运行')">了解详情</button>
+                <button onclick="addToCart('小米空气净化器',899)">加入购物车</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- 小米商城 -->
+<div id="shop" class="page">
+    <div class="shop-header">
+        <div class="shop-logo">MI</div>
+        <div class="shop-search">
+            <input type="text" placeholder="请输入商品名称" id="searchInp">
+            <button onclick="searchProduct()">搜索</button>
+        </div>
+    </div>
+    <div class="shop-container">
+        <ul class="shop-left">
+            <li onclick="changeShopCate(0)">手机系列</li>
+            <li onclick="changeShopCate(1)">电视大屏</li>
+            <li onclick="changeShopCate(2)">笔记本电脑</li>
+            <li onclick="changeShopCate(3)">平板设备</li>
+            <li onclick="changeShopCate(4)">智能家电</li>
+            <li onclick="changeShopCate(5)">路由器网络</li>
+            <li onclick="changeShopCate(6)">售后服务</li>
+            <li onclick="changeShopCate(7)">用户社区</li>
+        </ul>
+        <div class="shop-main" id="shopMain"></div>
+    </div>
+</div>
+
+<!-- 澎湃OS -->
+<div id="hyperos" class="page">
+    <div style="text-align:center;padding:40px 20px;max-width:1100px;margin:0 auto;">
+        <h2 style="font-size:30px;color:#222;">小米澎湃 OS · 人车家全生态</h2>
+        <p style="color:#666;font-size:16px;line-height:1.7;margin-bottom:40px;">
+            全终端无缝互联，手机、汽车、平板、家电、智能设备统一系统体验
+        </p>
+
+        <!-- 澎湃OS产品网格 -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:25px;">
+
+            <div style="border:1px solid #eee;padding:15px;border-radius:8px;">
+                <img src="https://p0.ssl.qhimgs1.com/t047183a0fe8fef4f3e.jpg" style="width:100%;height:160px;object-fit:cover;" alt="">
+                <h4>小米15 澎湃旗舰</h4>
+                <p style="color:#ff6700;font-weight:bold;">¥4299</p>
+                <div style="display:flex;gap:8px;justify-content:center;margin-top:10px;">
+                    <button onclick="showDetail('小米15','搭载最新澎湃OS，徕卡影像，极致流畅')">了解更多</button>
+                    <button onclick="addToCart('小米15',4299)">加入购物车</button>
+                </div>
+            </div>
+
+            <div style="border:1px solid #eee;padding:15px;border-radius:8px;">
+                <img src="https://p1.ssl.qhimgs1.com/t04a4eb8616da0d8d8b.jpg" style="width:100%;height:160px;object-fit:cover;" alt="">
+                <h4>小米平板7 Pro</h4>
+                <p style="color:#ff6700;font-weight:bold;">¥2999</p>
+                <div style="display:flex;gap:8px;justify-content:center;margin-top:10px;">
+                    <button onclick="showDetail('小米平板7 Pro','澎湃OS跨屏互联，办公学习全能')">了解更多</button>
+                    <button onclick="addToCart('小米平板7 Pro',2999)">加入购物车</button>
+                </div>
+            </div>
+
+            <div style="border:1px solid #eee;padding:15px;border-radius:8px;">
+                <img src="https://t00img.yangkeduo.com/goods/images/2020-05-23/92c188a8-de2a-4fcc-a0be-fe83175719e0.jpg" style="width:100%;height:160px;object-fit:cover;" alt="">
+                <h4>小米智能电视</h4>
+                <p style="color:#ff6700;font-weight:bold;">¥2999</p>
+                <div style="display:flex;gap:8px;justify-content:center;margin-top:10px;">
+                    <button onclick="showDetail('小米智能电视','澎湃OS智能家居中控，4K超清大屏')">了解更多</button>
+                    <button onclick="addToCart('小米智能电视',2999)">加入购物车</button>
+                </div>
+            </div>
+
+            <div style="border:1px solid #eee;padding:15px;border-radius:8px;">
+                <img src="https://img1.mydrivers.com/img/20230103/S1a8036f7-9deb-4d05-9ea8-a47aa13d9e25.jpg" style="width:100%;height:160px;object-fit:cover;" alt="">
+                <h4>小米万兆路由器</h4>
+                <p style="color:#ff6700;font-weight:bold;">¥799</p>
+                <div style="display:flex;gap:8px;justify-content:center;margin-top:10px;">
+                    <button onclick="showDetail('小米万兆路由器','全屋澎湃智能组网，高速稳定WiFi')">了解更多</button>
+                    <button onclick="addToCart('小米万兆路由器',799)">加入购物车</button>
+                </div>
+            </div>
+
+            <div style="border:1px solid #eee;padding:15px;border-radius:8px;">
+                <img src="https://p1.ssl.qhimgs1.com/t016e8e45c81d50bb71.png" style="width:100%;height:160px;object-fit:cover;" alt="">
+                <h4>小米扫地机器人</h4>
+                <p style="color:#ff6700;font-weight:bold;">¥2499</p>
+                <div style="display:flex;gap:8px;justify-content:center;margin-top:10px;">
+                    <button onclick="showDetail('小米扫地机器人','澎湃OS智能家居联动，自动扫拖')">了解更多</button>
+                    <button onclick="addToCart('小米扫地机器人',2499)">加入购物车</button>
+                </div>
+            </div>
+
+            <div style="border:1px solid #eee;padding:15px;border-radius:8px;">
+                <img src="https://p2.itc.cn/q_70/images03/20210524/cd62a5cdf38a451bb310c236f556f260.png" style="width:100%;height:160px;object-fit:cover;" alt="">
+                <h4>小米笔记本Pro</h4>
+                <p style="color:#ff6700;font-weight:bold;">¥5999</p>
+                <div style="display:flex;gap:8px;justify-content:center;margin-top:10px;">
+                    <button onclick="showDetail('小米笔记本Pro','澎湃跨设备协同，轻薄高性能')">了解更多</button>
+                    <button onclick="addToCart('小米笔记本Pro',5999)">加入购物车</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- 小米汽车 -->
+<div id="slide2" class="page">
+    <!-- 顶部导航栏 -->
+    <div style="background:#000;padding:12px 0;text-align:center;">
+        <a href="javascript:goPage('home')" style="color:#fff;margin:0 12px;text-decoration:none;font-size:14px;">首页</a>
+        <a href="javascript:showCarAllModel()" style="color:#fff;margin:0 12px;text-decoration:none;font-size:14px;">所有车型</a>
+        <a href="javascript:checkLoginGo('custom')" style="color:#fff;margin:0 12px;text-decoration:none;font-size:14px;">定制服务</a>
+        <a href="javascript:showCarTech()" style="color:#fff;margin:0 12px;text-decoration:none;font-size:14px;">核心技术</a>
+        <a href="javascript:showCarFactory()" style="color:#fff;margin:0 12px;text-decoration:none;font-size:14px;">小米汽车工厂</a>
+        <a href="javascript:checkLoginGo('store')" style="color:#fff;margin:0 12px;text-decoration:none;font-size:14px;">门店查询</a>
+        <a href="javascript:checkLoginGo('service')" style="color:#fff;margin:0 12px;text-decoration:none;font-size:14px;">服务介绍</a>
+        <a href="javascript:checkLoginGo('testdrive')" style="color:#fff;margin:0 12px;text-decoration:none;font-size:14px;">预约试驾</a>
+    </div>
+
+    <!-- 主视觉区（和你截图一致） -->
+    <div style="width:100%;height:500px;background:hsl(212, 61%, 67%);position:relative;text-align:center;">
+        <img src="https://p5.ssl.qhimgs1.com/t0422702f659fcbdec5.jpg" style="width:100%;height:100%;object-fit:cover;" alt="小米SU7">
+        <div style="position:absolute;top:20%;left:50%;transform:translateX(-50%);color:#fff;">
+            <h1 style="font-size:48px;margin:0;">新一代 SU7</h1>
+        </div>
+        <div style="position:absolute;bottom:100px;left:50%;transform:translateX(-50%);display:flex;gap:20px;">
+            <button onclick="showDetail('小米SU7','纯电高性能轿跑，超快充，智能座舱')" style="padding:10px 30px;border:1px solid #fff;background:transparent;color:#fff;border-radius:4px;cursor:pointer;">了解详情</button>
+            <button onclick="carTestDrive()" style="padding:10px 30px;border:none;background:#fff;color:#000;border-radius:4px;cursor:pointer;">预约试驾</button>
+            <button onclick="carCustomize()" style="padding:10px 30px;border:none;background:#0071e3;color:#fff;border-radius:4px;cursor:pointer;">开始选配</button>
+        </div>
+    </div>
+
+    <!-- 其他车型展示 -->
+    <div style="max-width:1200px;margin:40px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:0 20px;">
+        <!-- SU7 标准版 -->
+        <div style="border:1px solid #eee;border-radius:8px;padding:20px;text-align:center;">
+            <img src="https://p0.ssl.qhimgs1.com/t049ef07dc06d462e80.jpg" style="width:100%;height:180px;object-fit:cover;border-radius:6px;" alt="小米SU7">
+            <h3 style="margin:15px 0 5px;">小米SU7 标准版</h3>
+            <p style="color:#ff6700;font-size:18px;font-weight:bold;">¥215,900</p>
+            <div style="margin-top:15px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+                <button onclick="showDetail('小米SU7 标准版','长续航纯电轿跑，智能驾驶')" style="padding:5px 10px;cursor:pointer;">了解详情</button>
+                <button onclick="carTestDrive()" style="padding:5px 10px;cursor:pointer;">预约试驾</button>
+                <button onclick="carCustomize()" style="padding:5px 10px;cursor:pointer;">开始选配</button>
+            </div>
+        </div>
+        <!-- SU7 Pro -->
+        <div style="border:1px solid #eee;border-radius:8px;padding:20px;text-align:center;">
+            <img src="https://p1.ssl.qhimgs1.com/t04da2e21814871b531.jpg" style="width:100%;height:180px;object-fit:cover;border-radius:6px;" alt="小米SU7 Pro">
+            <h3 style="margin:15px 0 5px;">小米SU7 Pro</h3>
+            <p style="color:#ff6700;font-size:18px;font-weight:bold;">¥245,900</p>
+            <div style="margin-top:15px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+                <button onclick="showDetail('小米SU7 Pro','高性能版，更长续航，更快充电')" style="padding:5px 10px;cursor:pointer;">了解详情</button>
+                <button onclick="carTestDrive()" style="padding:5px 10px;cursor:pointer;">预约试驾</button>
+                <button onclick="carCustomize()" style="padding:5px 10px;cursor:pointer;">开始选配</button>
+            </div>
+        </div>
+        <!-- SU7 Max -->
+        <div style="border:1px solid #eee;border-radius:8px;padding:20px;text-align:center;">
+            <img src="https://p0.ssl.qhimgs1.com/t0468a5b7fa56dea0d4.png" style="width:100%;height:180px;object-fit:cover;border-radius:6px;" alt="小米SU7 Max">
+            <h3 style="margin:15px 0 5px;">小米SU7 Max</h3>
+            <p style="color:#ff6700;font-size:18px;font-weight:bold;">¥299,900</p>
+            <div style="margin-top:15px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+                <button onclick="showDetail('小米SU7 Max','旗舰性能版，极速双电机，顶级智驾')" style="padding:5px 10px;cursor:pointer;">了解详情</button>
+                <button onclick="carTestDrive()" style="padding:5px 10px;cursor:pointer;">预约试驾</button>
+                <button onclick="carCustomize()" style="padding:5px 10px;cursor:pointer;">开始选配</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 小米影像 全新重写版 -->
+<div id="image" class="page">
+
+<!-- 顶部一级导航 -->
+<div style="background:#000; text-align:center; padding:14px 0;">
+    <a href="javascript:goPage('home')" style="color:#fff; text-decoration:none; margin:0 18px; font-size:15px;">首页</a>
+    <a href="javascript:alert('进入影像大赛')" style="color:#fff; text-decoration:none; margin:0 18px; font-size:15px;">影像大赛</a>
+    <a href="javascript:alert('进入影像故事')" style="color:#fff; text-decoration:none; margin:0 18px; font-size:15px;">影像故事</a>
+</div>
+
+<!-- 底部二级功能栏 -->
+<div style="background:#333; text-align:center; padding:12px 0; margin-top:30px;">
+    <a href="javascript:alert('大赛首页')" style="color:#fff; text-decoration:none; margin:0 12px; font-size:14px;">大赛首页</a>
+    <a href="javascript:alert('影像主题')" style="color:#fff; text-decoration:none; margin:0 12px; font-size:14px;">影像主题</a>
+    <a href="javascript:alert('专业评审')" style="color:#fff; text-decoration:none; margin:0 12px; font-size:14px;">专业评审</a>
+    <a href="javascript:alert('参赛指南')" style="color:#fff; text-decoration:none; margin:0 12px; font-size:14px;">参赛指南</a>
+    <a href="javascript:alert('我的作品')" style="color:#fff; text-decoration:none; margin:0 12px; font-size:14px;">我的作品</a>
+    <a href="javascript:alert('请先登录再上传作品')" style="color:#fff; text-decoration:none; margin:0 12px; font-size:14px;">上传作品</a>
+</div>
+
+<!-- 中间内容区域 图片+文字说明 -->
+<div style="width:90%; margin:50px auto;">
+    <h2 style="text-align:center; color:#222;">小米徕卡影像大赛</h2>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin:40px 0;">
+        <div style="text-align:center;">
+            <img src="https://p5.ssl.qhimgs1.com/t0443b0bd1366573c75.jpg" style="width:100%; border-radius:6px;">
+            <p style="color:#666; margin-top:8px;">风光摄影</p>
+        </div>
+        <div style="text-align:center;">
+            <img src="https://p0.ssl.qhimgs1.com/t01ec826cfa4f5aac1e.jpg" style="width:100%; border-radius:6px;">
+            <p style="color:#666; margin-top:8px;">人像写真</p>
+        </div>
+        <div style="text-align:center;">
+            <img src="https://cds.chinadaily.com.cn/dams/capital/image/202111/24/619e00cee4b0272e995ce499.jpg" style="width:100%; border-radius:6px;">
+            <p style="color:#666; margin-top:8px;">城市夜景</p>
+        </div>
+    </div>
+
+    <p style="text-align:center; color:#555; line-height:1.8;">
+    小米影像汇聚全球摄影爱好者作品，覆盖风光、人像、夜景、微距等多类题材。<br>
+    参与影像大赛，投稿你的摄影作品，和千万米粉一起记录生活美好瞬间。
+    </p>
+</div>
+
+</div>
+
+<!-- 云服务页面（适配你现有网站结构） -->
+<div id="cloud" class="page">
+    <!-- 顶部导航 -->
+    <div style="background:#fff; padding:12px 20px; border-bottom:1px solid #eee; display:flex; justify-content:space-between; align-items:center;">
+        <div style="display:flex; gap:25px;">
+            <a href="javascript:goPage('home')" style="color:#333; text-decoration:none; font-size:14px;">首页</a>
+            <a href="javascript:alert('云服务介绍')" style="color:#333; text-decoration:none; font-size:14px;">云服务介绍</a>
+            <a href="javascript:alert('云同步功能')" style="color:#333; text-decoration:none; font-size:14px;">云同步</a>
+            <a href="javascript:alert('云相册')" style="color:#333; text-decoration:none; font-size:14px;">云相册</a>
+        </div>
+        <div style="font-size:13px; color:#666;">简体中文</div>
+    </div>
+
+    <!-- 主内容区（和截图效果一致） -->
+    <div style="max-width:1100px; margin:60px auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <!-- 左侧文字区域 -->
+        <div style="flex:1; min-width:300px; padding-right:40px;">
+            <h2 style="font-size:28px; color:#222; margin:0 0 10px 0;">小米云服务</h2>
+            <p style="color:#666; margin:0 0 30px 0; font-size:14px;">随时随地，管理你的所有设备和数据</p>
+            <button onclick="openLoginModal()" style="background:#4285f4; color:#fff; border:none; padding:10px 25px; border-radius:6px; cursor:pointer; font-size:14px;">使用小米账号登录</button>
+        </div>
+
+        <!-- 右侧图片区域（和截图里的手机电脑图对应） -->
+        <div style="flex:1; min-width:400px; text-align:center;">
+            <img src="https://p0.ssl.qhimgs1.com/t04a621d46fa6333b9e.jpg" style="max-width:100%; height:auto;" alt="小米云服务设备同步">
+            <div style="margin-top:15px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+                <div style="background:#f5f5f5; padding:8px 12px; border-radius:15px; font-size:12px; color:#666;">小米手机帐号解锁清除</div>
+                <div style="background:#f5f5f5; padding:8px 12px; border-radius:15px; font-size:12px; color:#666;">小米查找位置手机</div>
+                <div style="background:#f5f5f5; padding:8px 12px; border-radius:15px; font-size:12px; color:#666;">查找设备定位官网</div>
+                <div style="background:#f5f5f5; padding:8px 12px; border-radius:15px; font-size:12px; color:#666;">小米云服务官网入口</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部功能说明区 -->
+    <div style="max-width:900px; margin:80px auto 40px; padding:0 20px; text-align:center; color:#555; font-size:13px;">
+        <p style="margin:5px 0;">手机申诉解锁 | 服务状态 | 隐私政策 | 用户协议</p>
+        <p style="margin:5px 0;">版权所有 ©2024 Xiaomi. All rights reserved.</p>
+    </div>
+</div>
+
+
+<!-- IoT平台页面（适配你现有网站结构） -->
+<div id="iot" class="page">
+    <!-- 顶部导航栏（和截图一致） -->
+    <div style="background:#fff; border-bottom:1px solid #eee; padding:12px 20px; display:flex; justify-content:space-between; align-items:center;">
+        <!-- 左侧logo和导航 -->
+        <div style="display:flex; align-items:center; gap:30px;">
+            <span style="font-weight:bold; font-size:14px;">Xiaomi HyperOS Connect</span>
+            <a href="javascript:showIotSolution()" style="color:#333; text-decoration:none; font-size:14px;">解决方案</a>
+            <a href="javascript:showIotKit()" style="color:#333; text-decoration:none; font-size:14px;">开发套件</a>
+            <a href="javascript:showIotMarket()" style="color:#333; text-decoration:none; font-size:14px;">营销渠道</a>
+            <a href="javascript:showIotEco()" style="color:#333; text-decoration:none; font-size:14px;">生态合作</a>
+            <a href="javascript:showIotTrain()" style="color:#333; text-decoration:none; font-size:14px;">培训与支持</a>
+            <a href="javascript:showXiaomiVela()" style="color:#333; text-decoration:none; font-size:14px;">Xiaomi Vela</a>
+        </div>
+        <!-- 右侧登录按钮 -->
+        <button onclick="openLoginModal()" style="background:#00b42a; color:#fff; border:none; padding:6px 15px; border-radius:4px; cursor:pointer; font-size:13px;">注册/登录</button>
+    </div>
+
+    <!-- 主内容区 -->
+    <div style="max-width:1100px; margin:80px auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <!-- 左侧文字区域 -->
+        <div style="flex:1; min-width:300px; padding-right:40px;">
+            <h1 style="font-size:32px; color:#222; margin:0 0 10px 0;">小米澎湃智联IoT开发者平台</h1>
+            <p style="font-size:18px; color:#444; margin:0 0 15px 0;">品牌全新升级，共创开放生态</p>
+            <p style="color:#666; margin:0 0 30px 0; font-size:14px;">与Xiaomi HyperOS Connect联手，共同打造人车家全生态</p>
+            <div style="display:flex; gap:15px;">
+                <button onclick="joinIot()" style="background:#00b42a; color:#fff; border:none; padding:10px 20px; border-radius:4px; cursor:pointer;">立即加入</button>
+                <button onclick="openDoc()" style="background:#f5f5f5; color:#333; border:1px solid #ddd; padding:10px 20px; border-radius:4px; cursor:pointer;">文档中心</button>
+            </div>
+        </div>
+
+        <!-- 右侧示意图区域（点击可了解更多） -->
+        <div style="flex:1; min-width:400px; text-align:center; cursor:pointer;" onclick="showIotDiagram()">
+            <img src="https://f10.baidu.com/it/u=3728383590,917693678&fm=173&app=25&f=JPEG?w=500&h=297&s=FBB7A5446A734096D0A960D00300809B&access=215967316" style="max-width:100%; height:auto;" alt="IoT设备示意图">
+            <p style="color:#999; font-size:13px; margin-top:8px;">点击示意图了解更多设备协同方案</p>
+        </div>
+    </div>
+
+    <!-- 底部功能介绍区（每个模块点击可了解更多） -->
+    <div style="max-width:1100px; margin:80px auto; padding:0 20px; display:grid; grid-template-columns:repeat(3,1fr); gap:30px;">
+        <div style="text-align:center; cursor:pointer; padding:20px; border-radius:8px; transition:background 0.3s;" onclick="learnMoreOpen()">
+            <h3 style="color:#222; margin-bottom:10px;">开放接入</h3>
+            <p style="color:#666; font-size:14px;">支持多品类设备快速接入，简化开发流程</p>
+            <p style="color:#00b42a; font-size:13px; margin-top:10px;">点击了解更多 →</p>
+        </div>
+        <div style="text-align:center; cursor:pointer; padding:20px; border-radius:8px; transition:background 0.3s;" onclick="learnMoreEco()">
+            <h3 style="color:#222; margin-bottom:10px;">全生态协同</h3>
+            <p style="color:#666; font-size:14px;">与手机、汽车、智能家居实现无缝联动</p>
+            <p style="color:#00b42a; font-size:13px; margin-top:10px;">点击了解更多 →</p>
+        </div>
+        <div style="text-align:center; cursor:pointer; padding:20px; border-radius:8px; transition:background 0.3s;" onclick="learnMoreSecurity()">
+            <h3 style="color:#222; margin-bottom:10px;">安全可靠</h3>
+            <p style="color:#666; font-size:14px;">多重安全机制，保障设备与数据安全</p>
+            <p style="color:#00b42a; font-size:13px; margin-top:10px;">点击了解更多 →</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- 小米有品 完整成品页面 id="youpin" -->
+<div id="youpin" class="page">
+    <!-- 顶部功能栏 -->
+    <div style="background:#f5f5f5; padding:8px 20px; display:flex; justify-content:space-between; align-items:center; font-size:13px; color:#666;">
+        <div>
+            <a href="javascript:openLoginModal()" style="color:#666; text-decoration:none; margin-right:15px;">登录</a>
+            <a href="javascript:alert('注册新账号')" style="color:#666; text-decoration:none; margin-right:15px;">注册</a>
+        </div>
+        <div>
+            <a href="javascript:alert('帮助中心')" style="color:#666; text-decoration:none; margin:0 10px;">帮助中心</a>
+            <a href="javascript:alert('下载APP')" style="color:#666; text-decoration:none; margin:0 10px;">下载APP</a>
+            <a href="javascript:alert('资质证照/协议规则')" style="color:#666; text-decoration:none; margin:0 10px;">资质证照/协议规则</a>
+        </div>
+    </div>
+
+    <!-- 导航+搜索栏 -->
+    <div style="background:#fff; padding:15px 20px; border-bottom:1px solid #eee; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:30px;">
+            <span style="font-size:24px; font-weight:bold; color:#222;">小米有品</span>
+            <a href="javascript:alert('进入有品秒杀专区')" style="color:#333; text-decoration:none; font-size:14px;">有品秒杀</a>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; margin-top:10px;">
+            <input id="youpin-search" type="text" placeholder="米家电动剃须刀Pro" style="border:1px solid #ddd; padding:8px 12px; border-radius:4px; width:220px;">
+            <button onclick="alertSearch()" style="background:#ff6700; color:#fff; border:none; padding:8px 12px; border-radius:4px; cursor:pointer;">搜索</button>
+            <a href="javascript:openCart()" style="color:#333; font-size:20px; text-decoration:none;">🛒</a>
+        </div>
+    </div>
+
+    <div style="display:flex; max-width:1200px; margin:0 auto;">
+        <!-- 左侧分类栏 -->
+        <div style="width:160px; background:#f9f9f9; padding:15px 10px; font-size:13px; line-height:2.2;">
+            <div style="font-weight:bold; margin-bottom:8px;">有品推荐 / AI科技</div>
+            <a href="javascript:showCategory('手机数码 / 小米自营')" style="display:block; color:#666; text-decoration:none;">手机数码 / 小米自营</a>
+            <a href="javascript:showCategory('小米电视 / 电脑办公')" style="display:block; color:#666; text-decoration:none;">小米电视 / 电脑办公</a>
+            <a href="javascript:showCategory('大家电 / 小家电')" style="display:block; color:#666; text-decoration:none;">大家电 / 小家电</a>
+            <a href="javascript:showCategory('美食酒水 / 日用百货')" style="display:block; color:#666; text-decoration:none;">美食酒水 / 日用百货</a>
+            <a href="javascript:showCategory('服装配饰 / 家具家装')" style="display:block; color:#666; text-decoration:none;">服装配饰 / 家具家装</a>
+            <a href="javascript:showCategory('母婴亲子 / 有品海购')" style="display:block; color:#666; text-decoration:none;">母婴亲子 / 有品海购</a>
+            <a href="javascript:showCategory('手表首饰 / 出行车品')" style="display:block; color:#666; text-decoration:none;">手表首饰 / 出行车品</a>
+            <a href="javascript:showCategory('家纺厨具 / 美妆个护')" style="display:block; color:#666; text-decoration:none;">家纺厨具 / 美妆个护</a>
+            <a href="javascript:showCategory('鞋靴箱包 / 医疗健康')" style="display:block; color:#666; text-decoration:none;">鞋靴箱包 / 医疗健康</a>
+        </div>
+
+        <!-- 右侧主内容区 -->
+        <div style="flex:1; padding:20px;">
+            <!-- 主Banner轮播 -->
+            <div style="background:#f0f0f0; border-radius:8px; height:280px; display:flex; align-items:center; justify-content:space-around; padding:20px; margin-bottom:30px;">
+                <div>
+                    <h2 style="font-size:24px; color:#222;">宜米冰咖制冰饮水机</h2>
+                    <p style="color:#666; margin:10px 0;">智饮四合一 双模四萃 米家智控</p>
+                    <p style="color:red; font-size:20px; font-weight:bold;">众筹价 ¥1999</p>
+                    <button onclick="joinCrowdfunding('宜米冰咖制冰饮水机', 1999)" style="background:#ff6700; color:#fff; border:none; padding:8px 20px; border-radius:4px; cursor:pointer; margin-top:10px;">立即查看 ></button>
+                </div>
+                <div>
+                    <img src="https://p2.ssl.qhimgs1.com/t03380e22d41f9fa1a8.png" style="height:200px; border-radius:4px;" alt="制冰饮水机">
+                </div>
+            </div>
+
+            <!-- 有品秒杀（带动态倒计时） -->
+            <div style="margin-bottom:40px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+                    <h3 style="font-size:20px; color:#222;">🔥 有品秒杀</h3>
+                    <div style="color:red; font-size:14px;">
+                        距结束还有：<span id="flash-countdown" style="font-weight:bold;">02:30:45</span>
+                    </div>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:15px;">
+                    <!-- 秒杀商品1 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center;">
+                        <img src="https://p2.ssl.qhimgs1.com/t04b33db5842e292d4c.jpg" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">小米恒温电水壶</p>
+                        <p style="color:red; font-weight:bold;">秒杀价 ¥79</p>
+                        <button onclick="buyFlashSale('小米恒温电水壶', 79)" style="background:#ff6700; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; margin-top:5px;">立即抢购</button>
+                    </div>
+                    <!-- 秒杀商品2 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center;">
+                        <img src="https://img.alicdn.com/bao/uploaded/O1CN01tqz36x1ddfdvBYwF8_!!6000000003759-0-yinhe.jpg_500x500.jpg" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">米家电动牙刷</p>
+                        <p style="color:red; font-weight:bold;">秒杀价 ¥99</p>
+                        <button onclick="buyFlashSale('米家电动牙刷', 99)" style="background:#ff6700; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; margin-top:5px;">立即抢购</button>
+                    </div>
+                    <!-- 秒杀商品3 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center;">
+                        <img src="https://gw.alicdn.com/bao/uploaded/i2/1714128138/O1CN01jlhdgh29zG0w1huxI_!!1714128138.jpg_Q75.jpg" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">小米充电宝10000mAh</p>
+                        <p style="color:red; font-weight:bold;">秒杀价 ¥89</p>
+                        <button onclick="buyFlashSale('小米充电宝10000mAh', 89)" style="background:#ff6700; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; margin-top:5px;">立即抢购</button>
+                    </div>
+                    <!-- 秒杀商品4 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center;">
+                        <img src="https://p0.ssl.qhimgs1.com/t04294176d1b8feb61e.jpg" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">小爱音箱Play</p>
+                        <p style="color:red; font-weight:bold;">秒杀价 ¥69</p>
+                        <button onclick="buyFlashSale('小爱音箱Play', 69)" style="background:#ff6700; color:#fff; border:none; padding:5px 10px; border-radius:4px; margin-top:5px;">立即抢购</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 每日新品 -->
+            <div style="margin-bottom:40px;">
+                <h3 style="font-size:20px; color:#222; margin-bottom:15px;">✨ 每日新品</h3>
+                <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:15px;">
+                    <!-- 新品1 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center; position:relative;">
+                        <span style="position:absolute; top:5px; left:5px; background:red; color:#fff; font-size:12px; padding:2px 6px; border-radius:3px;">新品</span>
+                        <img src="https://img14.360buyimg.com/pop/jfs/t1/61321/37/26284/45344/669f7cc0F24d93be6/b8e0e784ce7fc84b.png" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">小米Buds 4 降噪耳机</p>
+                        <p style="color:#ff6700; font-weight:bold;">¥499</p>
+                        <div style="display:flex; justify-content:space-around; margin-top:8px;">
+                            <button onclick="learnMore('小米Buds 4 降噪耳机')" style="background:#f5f5f5; border:1px solid #ddd; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">了解更多</button>
+                            <button onclick="addToCart('小米Buds 4 降噪耳机', 499)" style="background:#ff6700; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">加入购物车</button>
+                        </div>
+                    </div>
+                    <!-- 新品2 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center; position:relative;">
+                        <span style="position:absolute; top:5px; left:5px; background:red; color:#fff; font-size:12px; padding:2px 6px; border-radius:3px;">新品</span>
+                        <img src="https://p2.ssl.qhimgs1.com/t043b534fb7bdba0e6c.jpg" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">小米手环8 Pro</p>
+                        <p style="color:#ff6700; font-weight:bold;">¥379</p>
+                        <div style="display:flex; justify-content:space-around; margin-top:8px;">
+                            <button onclick="learnMore('小米手环8 Pro')" style="background:#f5f5f5; border:1px solid #ddd; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">了解更多</button>
+                            <button onclick="addToCart('小米手环8 Pro', 379)" style="background:#ff6700; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">加入购物车</button>
+                        </div>
+                    </div>
+                    <!-- 新品3 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center; position:relative;">
+                        <span style="position:absolute; top:5px; left:5px; background:red; color:#fff; font-size:12px; padding:2px 6px; border-radius:3px;">新品</span>
+                        <img src="https://p1.ssl.qhimgs1.com/t047fac0f6dc65bd7f7.jpg" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">米家空气净化器4</p>
+                        <p style="color:#ff6700; font-weight:bold;">¥1499</p>
+                        <div style="display:flex; justify-content:space-around; margin-top:8px;">
+                            <button onclick="learnMore('米家空气净化器4')" style="background:#f5f5f5; border:1px solid #ddd; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">了解更多</button>
+                            <button onclick="addToCart('米家空气净化器4', 1499)" style="background:#ff6700; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">加入购物车</button>
+                        </div>
+                    </div>
+                    <!-- 新品4 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center; position:relative;">
+                        <span style="position:absolute; top:5px; left:5px; background:red; color:#fff; font-size:12px; padding:2px 6px; border-radius:3px;">新品</span>
+                        <img src="https://p0.ssl.qhimgs1.com/t0492923922b40891be.jpg" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">米家智能台灯2</p>
+                        <p style="color:#ff6700; font-weight:bold;">¥179</p>
+                        <div style="display:flex; justify-content:space-around; margin-top:8px;">
+                            <button onclick="learnMore('米家智能台灯2')" style="background:#f5f5f5; border:1px solid #ddd; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">了解更多</button>
+                            <button onclick="addToCart('米家智能台灯2', 179)" style="background:#ff6700; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 为你推荐 -->
+            <div>
+                <h3 style="font-size:20px; color:#222; margin-bottom:15px;">💡 为你推荐</h3>
+                <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:15px;">
+                    <!-- 推荐1 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center;">
+                        <img src="https://pic1.zhimg.com/v2-45423ee8a61da38fff5cecee540abd10_b.jpg?consumer=ZHI_MENG" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">米家扫地机器人2</p>
+                        <p style="color:#ff6700; font-weight:bold;">¥1999</p>
+                        <div style="display:flex; justify-content:space-around; margin-top:8px;">
+                            <button onclick="learnMore('米家扫地机器人2')" style="background:#f5f5f5; border:1px solid #ddd; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">了解更多</button>
+                            <button onclick="addToCart('米家扫地机器人2', 1999)" style="background:#ff6700; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">加入购物车</button>
+                        </div>
+                    </div>
+                    <!-- 推荐2 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center;">
+                        <img src="https://p1.ssl.qhimgs1.com/t04fbd4acd6f6e1a3cb.jpg" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">小米迷你冰箱100L</p>
+                        <p style="color:#ff6700; font-weight:bold;">¥899</p>
+                        <div style="display:flex; justify-content:space-around; margin-top:8px;">
+                            <button onclick="learnMore('小米迷你冰箱100L')" style="background:#f5f5f5; border:1px solid #ddd; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">了解更多</button>
+                            <button onclick="addToCart('小米迷你冰箱100L', 899)" style="background:#ff6700; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">加入购物车</button>
+                        </div>
+                    </div>
+                    <!-- 推荐3 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center;">
+                        <img src="https://sinastorage.com/storage.miaosha.sina.com.cn/product/20190514/e25eb892fdbfb9d86f22531bf31e13f5.jpeg" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">米家直流变频落地扇</p>
+                        <p style="color:#ff6700; font-weight:bold;">¥229</p>
+                        <div style="display:flex; justify-content:space-around; margin-top:8px;">
+                            <button onclick="learnMore('米家直流变频落地扇')" style="background:#f5f5f5; border:1px solid #ddd; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">了解更多</button>
+                            <button onclick="addToCart('米家直流变频落地扇', 229)" style="background:#ff6700; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">加入购物车</button>
+                        </div>
+                    </div>
+                    <!-- 推荐4 -->
+                    <div style="border:1px solid #eee; border-radius:8px; padding:10px; text-align:center;">
+                        <img src="https://img14.360buyimg.com/pop/jfs/t1/28929/22/22130/30490/66cc1f46F06d3acd3/98abdf1746acd7fa.png" style="width:100px; height:100px; object-fit:cover; border-radius:4px;">
+                        <p style="margin:8px 0;">米家智能电饭煲3L</p>
+                        <p style="color:#ff6700; font-weight:bold;">¥299</p>
+                        <div style="display:flex; justify-content:space-around; margin-top:8px;">
+                            <button onclick="learnMore('米家智能电饭煲3L')" style="background:#f5f5f5; border:1px solid #ddd; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">了解更多</button>
+                            <button onclick="addToCart('米家智能电饭煲3L', 299)" style="background:#ff6700; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:12px;">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 登录注册弹窗 最终完善版 -->
+<div id="loginModal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:none;z-index:9999;align-items:center;justify-content:center;">
+    <div style="width:420px;background:#fff;border-radius:8px;padding:40px 35px;position:relative;">
+        <!-- 关闭按钮 -->
+        <span onclick="closeLoginModal()" style="position:absolute;top:18px;right:22px;font-size:26px;cursor:pointer;color:#999;">×</span>
+
+        <!-- 顶部链接：用户协议、隐私政策、帮助中心 -->
+        <div style="text-align:right;margin-bottom:30px;font-size:13px;">
+            <a href="javascript:showUserAgree()" style="color:#666;text-decoration:none;margin:0 8px;">用户协议</a>
+            <a href="javascript:showPrivacy()" style="color:#666;text-decoration:none;margin:0 8px;">隐私政策</a>
+            <a href="javascript:showHelp()" style="color:#666;text-decoration:none;margin:0 8px;">帮助中心</a>
+        </div>
+
+        <!-- 登录/注册切换标签 -->
+        <div style="display:flex;margin-bottom:30px;">
+            <div id="tabLogin" onclick="switchTab('login')" style="font-size:24px;font-weight:bold;color:#222;cursor:pointer;border-bottom:2px solid #ff6700;padding-bottom:6px;">登录</div>
+            <div id="tabReg" onclick="switchTab('reg')" style="font-size:24px;color:#666;cursor:pointer;margin-left:35px;padding-bottom:6px;">注册</div>
+        </div>
+
+        <!-- 登录表单 -->
+        <div id="loginBox">
+            <input type="text" id="loginAccount" placeholder="邮箱/手机号码/小米ID" style="width:100%;box-sizing:border-box;padding:14px;margin-bottom:18px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:15px;">
+            <div style="position:relative;margin-bottom:18px;">
+                <input type="password" id="loginPwd" placeholder="请输入密码" style="width:100%;box-sizing:border-box;padding:14px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:15px;">
+                <span onclick="togglePwd('loginPwd')" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);cursor:pointer;color:#999;font-size:16px;">👁️</span>
+            </div>
+
+            <!-- 同意协议复选框 -->
+            <div style="margin-bottom:22px;font-size:13px;color:#666;">
+                <input type="checkbox" id="agreeCheck" style="margin-right:6px;vertical-align:middle;">
+                <label for="agreeCheck" style="vertical-align:middle;">已阅读并同意
+                    <a href="javascript:showUserAgree()" style="color:#ff6700;text-decoration:none;">用户协议</a>和
+                    <a href="javascript:showPrivacy()" style="color:#ff6700;text-decoration:none;">隐私政策</a>
+                </label>
+            </div>
+
+            <button onclick="doLogin()" style="width:100%;padding:14px;background:#ff6700;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:16px;">登录</button>
+
+            <div style="display:flex;justify-content:space-between;margin-top:16px;font-size:13px;">
+                <a href="javascript:alert('请前往官网找回密码')" style="color:#666;text-decoration:none;">忘记密码？</a>
+                <a href="javascript:alert('短信快捷登录即将开通')" style="color:#666;text-decoration:none;">短信登录</a>
+            </div>
+        </div>
+
+        <!-- 注册表单 -->
+        <div id="regBox" style="display:none;">
+            <input type="text" id="regPhone" placeholder="请输入手机号码" style="width:100%;box-sizing:border-box;padding:14px;margin-bottom:18px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:15px;">
+            <div style="display:flex;gap:10px;margin-bottom:18px;">
+                <input type="text" id="regCode" placeholder="请输入验证码" style="flex:1;padding:14px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:15px;">
+                <button onclick="sendCode()" style="white-space:nowrap;padding:0 15px;background:#f5f5f5;color:#333;border:1px solid #ddd;border-radius:4px;cursor:pointer;">获取验证码</button>
+            </div>
+            <div style="position:relative;margin-bottom:22px;">
+                <input type="password" id="regPwd" placeholder="请设置6位以上密码" style="width:100%;box-sizing:border-box;padding:14px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:15px;">
+                <span onclick="togglePwd('regPwd')" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);cursor:pointer;color:#999;font-size:16px;">👁️</span>
+            </div>
+            <button onclick="doReg()" style="width:100%;padding:14px;background:#ff6700;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:16px;">立即注册</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 购物车页面 id="cart" class="page" -->
+<div id="cart" class="page" style="padding:40px 20px; background:#f8f8f8; min-height:100vh;">
+    <div style="max-width:1000px; margin:0 auto; background:#fff; padding:30px; border-radius:8px;">
+        <h2 style="font-size:24px; margin-bottom:25px; color:#222;">我的购物车</h2>
+
+        <!-- 购物车表头 -->
+        <div style="display:grid; grid-template-columns:3fr 1fr 1.5fr 1fr 0.5fr; padding:15px 0; border-bottom:1px solid #eee; font-weight:bold; color:#666;">
+            <div>商品</div>
+            <div style="text-align:center;">单价</div>
+            <div style="text-align:center;">数量</div>
+            <div style="text-align:center;">小计</div>
+            <div style="text-align:center;">操作</div>
+        </div>
+
+        <!-- 购物车商品列表容器 -->
+        <div id="cartList"></div>
+
+        <!-- 空购物车提示 -->
+        <div id="emptyCart" style="padding:60px 0; text-align:center; color:#999; font-size:16px;">
+            购物车空空如也，快去挑选商品吧
+            <br>
+            <button onclick="goPage('youpin')" style="margin-top:20px; padding:10px 20px; background:#ff6700; color:#fff; border:none; border-radius:4px; cursor:pointer;">去选购商品</button>
+        </div>
+
+        <!-- 结算栏 -->
+        <div id="cartTotalBox" style="display:none; margin-top:30px; padding-top:20px; border-top:2px solid #eee; text-align:right;">
+            <div style="font-size:18px; margin-bottom:15px;">
+                合计：<span id="cartTotalPrice" style="color:red; font-size:22px; font-weight:bold;">¥0.00</span>
+            </div>
+            <button onclick="settleCart()" style="padding:12px 30px; background:#ff6700; color:#fff; border:none; border-radius:4px; cursor:pointer;">去结算</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- 站点底部 -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-col">
+                <div class="footer-title">选购及了解</div>
+                <a href="javascript:goPage('shop')">小米手机</a>
+                <a href="javascript:goPage('slide2')">小米汽车</a>
+                <a href="javascript:goPage('shop')">小米平板</a>
+                <a href="javascript:goPage('shop')">小米电视</a>
+                <a href="javascript:goPage('youpin')">小米有品</a>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title">服务支持</div>
+                <a href="javascript:showHelp()">帮助中心</a>
+                <a href="javascript:alert('售后政策：7天无理由退货，15天换货，1年保修')">售后政策</a>
+                <a href="javascript:alert('预约维修服务')">预约维修</a>
+                <a href="javascript:alert('订单查询功能')">订单查询</a>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title">线下门店</div>
+                <a href="javascript:alert('小米之家门店查询')">小米之家</a>
+                <a href="javascript:alert('服务网点查询')">服务网点</a>
+                <a href="javascript:alert('授权体验店查询')">授权体验店</a>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title">关于小米</div>
+                <a href="javascript:alert('小米公司简介')">了解小米</a>
+                <a href="javascript:alert('加入小米，招聘页面')">加入小米</a>
+                <a href="javascript:alert('投资者关系')">投资者关系</a>
+                <a href="javascript:showPrivacy()">隐私政策</a>
+            </div>
+            <div class="footer-contact">
+                <div class="footer-phone">400-100-5678</div>
+                <div class="footer-time">8:00-18:00（仅收市话费）</div>
+                <button class="footer-service-btn" onclick="showHelp()">联系人工客服</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">MI</div>
+            <div class="footer-copy">
+                <p>小米官网复刻练习作品 | 仅用于学习交流，非商业用途</p>
+                <p>© mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<div class="back-top" onclick="backToTop()">↑</div>
+</body>
+</html>
